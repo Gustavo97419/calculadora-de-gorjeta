@@ -19,8 +19,18 @@ if(evento.target.value === "0") {
    paragrafoErro.style.display = "block"
    divErro.setAttribute("id", "erro-div")
 } else {
- paragrafoErro.style.display = "none"
-   divErro.setAttribute("id", "")
+    paragrafoErro.style.display = "none"
+    divErro.setAttribute("id", "")
     pessoas = Number(evento.target.value)
 }
 }
+
+const botoesGorjeta = document.querySelectorAll(".gorjeta input[type='button']")
+botoesGorjeta.forEach(botao => {
+    botao.addEventListener("click",receberPorcentagem)
+})
+
+function receberPorcentagem () {
+    console.log("chamou a função")
+}
+
